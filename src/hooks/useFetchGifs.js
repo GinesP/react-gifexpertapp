@@ -8,6 +8,7 @@ export const useFetchGifs = ( category )=>{
     });
 
     useEffect( ()=>{
+
         getGifs( category)
         .then(imgs => {
             
@@ -16,6 +17,8 @@ export const useFetchGifs = ( category )=>{
                 loading: false
             });
         });
+
     }, [category])
+    
     return state;
 }
